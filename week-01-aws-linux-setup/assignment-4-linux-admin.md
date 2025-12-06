@@ -7,7 +7,7 @@ It includes networking, process monitoring, and system information commands — 
 
 ---
 
-# **📌 Task 1 – Networking Commands**
+## *📌 Task 1 – Networking Commands**
 
 ## **1. Check Network Interface Configuration**
 
@@ -164,7 +164,7 @@ Used to download images, scripts, or configuration files to the server — very 
 
 ---
 
-# ## **📌 Task 2 – Process Monitoring & Control**
+## **📌 Task 2 – Process Monitoring & Control**
 
 ## **Understanding Processes & Services**
 
@@ -279,7 +279,7 @@ Stops a running process. Useful for closing unresponsive or unnecessary tasks. N
 
 ---
 
-# ## **📌 Task 3 – System Information Commands**
+## *📌 Task 3 – System Information Commands**
 
 ---
 
