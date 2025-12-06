@@ -7,9 +7,9 @@ It includes networking, process monitoring, and system information commands — 
 
 ---
 
-# ## **📌 Task 1 – Networking Commands**
+# **📌 Task 1 – Networking Commands**
 
-## ### **1. Check Network Interface Configuration**
+## **1. Check Network Interface Configuration**
 
 > **Note:** `ifconfig` is part of the `net-tools` package. On modern Ubuntu, it may not be installed by default.  
 
@@ -50,7 +50,7 @@ It’s useful for checking network connectivity, verifying your server’s IP se
 
 ---
 
-## ### **2. Test Connectivity to a Domain**
+## **2. Test Connectivity to a Domain**
 
 ```bash
 ping -c 4 thecloudadvisory.com
@@ -75,7 +75,7 @@ This checks whether your server can reach the target website and confirms intern
 
 ---
 
-## ### **3. Check Open Ports & Listening Services**
+## **3. Check Open Ports & Listening Services**
 
 ```bash
 sudo netstat -tulnp
@@ -103,7 +103,7 @@ This helps verify whether services like Nginx (port 80) or SSH (port 22) are run
 ![Image 1](Figures/Assignment-4/ss4.png)
 ---
 
-## ### **4. DNS Lookup (Method 1 – dig)**
+## **4. DNS Lookup (Method 1 – dig)**
 
 ```bash
 dig pravinmishra.in
@@ -124,7 +124,7 @@ dig pravinmishra.in
 
 ---
 
-## ### **5. DNS Lookup (Method 2 – host)**
+## **5. DNS Lookup (Method 2 – host)**
 
 ```bash
 host pravinmishra.in
@@ -142,7 +142,7 @@ This provides a simpler DNS lookup showing only key records like A/AAAA. It’s 
 
 ---
 
-## ### **6. Download a File with wget**
+## **6. Download a File with wget**
 
 ```bash
 wget -O /tmp/Untitled-design-40.png <URL>
@@ -194,7 +194,7 @@ Before performing process monitoring, here’s a quick guide to clarify key conc
 
 ---
 
-## ### **7. List All Running Processes**
+## **7. List All Running Processes**
 
 ```bash
 ps -e
@@ -215,7 +215,7 @@ Displays all running processes on the machine. Useful for identifying what is cu
 
 ---
 
-## ### **8. Search for Nginx Process**
+## **8. Search for Nginx Process**
 
 ```bash
 ps aux | grep nginx
@@ -237,7 +237,7 @@ Checks whether the Nginx process is active. Shows PID, memory/CPU usage, and oth
 
 ---
 
-## ### **9. View Process Hierarchy**
+## **9. View Process Hierarchy**
 
 ```bash
 pstree
@@ -258,7 +258,7 @@ Shows parent–child relationships between processes. Useful when analyzing serv
 
 ---
 
-## ### **10. Terminate a Process**
+## **10. Terminate a Process**
 
 ```bash
 kill <PID>
@@ -283,7 +283,7 @@ Stops a running process. Useful for closing unresponsive or unnecessary tasks. N
 
 ---
 
-## ### **11. Display Full System Info**
+## **11. Display Full System Info**
 
 ```bash
 uname -a
@@ -303,7 +303,7 @@ Displays kernel version, OS type, architecture — helpful for debugging OS issu
 
 ---
 
-## ### **12. Check System Uptime**
+## **12. Check System Uptime**
 
 ```bash
 uptime
@@ -317,7 +317,7 @@ Shows how long the system has been running and its load average — useful for p
 
 ---
 
-## ### **13. Display Logged-in Users**
+## **13. Display Logged-in Users**
 
 ```bash
 who
@@ -331,7 +331,7 @@ Shows active logged-in users. Helps identify unauthorized access or user session
 
 ---
 
-## ### **14. Check Memory Usage**
+## **14. Check Memory Usage**
 
 ```bash
 free -h
@@ -349,7 +349,7 @@ Displays total, used, and free memory in readable units. Helpful for detecting m
 
 ---
 
-## ### **15. Check Disk Usage**
+## **15. Check Disk Usage**
 
 ```bash
 df -h
@@ -368,7 +368,7 @@ Shows available disk space on mounted filesystems. Important for preventing “d
 
 ---
 
-## ### **16. Directory Size in /var**
+## **16. Directory Size in /var**
 
 ```bash
 sudo du -sh /var/*
