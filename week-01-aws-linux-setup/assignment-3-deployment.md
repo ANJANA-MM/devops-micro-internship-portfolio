@@ -120,13 +120,15 @@ sudo apt update
 **Why:** 
 - Updates the list of available packages and versions from the repositories.
 - Ensures Ubuntu installs the latest package versions when you install or upgrade software.
-- Prevents errors caused by outdated package information.
+- Prevents errors caused by outdated package information.<br><br>
 
 ### 3.2 Install Node.js & npm
 
 ```bash
 sudo apt install -y nodejs npm
 ```
+<br><br>
+
 **Why:**
 - Installs Node.js runtime to run JavaScript on the server.
 - Installs npm to manage dependencies required by the React project.<br><br>
@@ -147,19 +149,23 @@ npm -v
 ```bash
 sudo apt install -y nginx
 ```
+<br><br>
+
 **Why:**
 - Installs Nginx web server to serve your React app.
 - Provides a stable, lightweight HTTP server for production use.<br><br>
 
 ![Install Nginx](Figures/Assignment-3/ss18.png)<br><br>
 
-### 3.5 Start & Enable Nginx
+### 3.5 Start & Enable Nginx<br><br>
 
 ```bash
 sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
+<br><br>
+
 **Why:**
 - Starts Nginx immediately and sets it to auto-start on boot.
 - Verifies the service is running to ensure the web server is ready to serve files.<br><br>
@@ -213,6 +219,8 @@ nano App.js
 ```bash
 npm install
 ```
+<br><br>
+
 **Why:**
 - Installs all libraries and packages specified in `package.json`.
 - Ensures the React project has everything it needs to build and run.
@@ -225,6 +233,8 @@ npm install
 ```bash
 npm run build
 ```
+<br><br>
+
 **Why:**
 - Compiles the React app into optimized production-ready static files.
 - Creates a build/ folder containing HTML, CSS, JS, and assets.
@@ -243,6 +253,8 @@ npm run build
 ```bash
 sudo rm -rf /var/www/html/*
 ```
+<br><br>
+
 **Why:**
 - Clears the existing files in Nginx’s default web directory.
 - Prevents conflicts with the default Nginx homepage.
@@ -257,6 +269,8 @@ sudo rm -rf /var/www/html/*
 ```bash
 sudo cp -r build/* /var/www/html/
 ```
+<br><br>
+
 **Why:**
 - Moves production-ready files from the project folder to Nginx’s web directory.
 - Only files in /var/www/html/ can be served by Nginx.
@@ -272,6 +286,7 @@ sudo cp -r build/* /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/
 ````
 <br><br>
+
 ![Change ownership](Figures/Assignment-3/ss34.png)<br><br>
 
 ![Verify ownership](Figures/Assignment-3/ss35.png)<br><br>
@@ -289,12 +304,14 @@ sudo chown -R www-data:www-data /var/www/html/
 grep "user" /etc/nginx/nginx.conf
 ```
 <br><br>
+
 **Typical results:**
 
 - Ubuntu/Debian → `user www-data;`
 - CentOS/RHEL/Amazon Linux → `user nginx;`
 
 <br><br>
+
 #### **🔍 How to Check Nginx Document Root**
 
 Because different OSes use different web root paths:<br><br>
@@ -305,6 +322,7 @@ Because different OSes use different web root paths:<br><br>
 sudo nginx -T | grep "root"
 ```
 <br><br>
+
 **Common default locations:**
 
 - Ubuntu/Debian → `/var/www/html`
@@ -319,6 +337,7 @@ sudo nginx -T | grep "root"
 sudo chmod -R 755 /var/www/html
 ```
 <br><br>
+
 ![Set permissions](Figures/Assignment-3/ss36.png)<br><br>
 
 ![Verify permissions](Figures/Assignment-3/ss37.png)<br><br>
@@ -330,7 +349,7 @@ sudo chmod -R 755 /var/www/html
   * **Owner** → read/write/execute
   * **Group & Others** → read/execute
 - This ensures Nginx can read and serve the files, while still keeping them secure.
-- Prevents issues where files cannot be executed or accessed by the web server.
+- Prevents issues where files cannot be executed or accessed by the web server.<br><br>
 
 ---
 
@@ -340,6 +359,7 @@ sudo chmod -R 755 /var/www/html
 sudo nano /etc/nginx/sites-available/default
 ```
 <br><br>
+
 Replace the default file with this **React-optimized Nginx configuration**:
 
 ```nginx
@@ -375,7 +395,7 @@ location / {
 }
 ```
 
-This works for static HTML files, but **NOT** for React apps.
+This works for static HTML files, but **NOT** for React apps.<br><br>
 
 ---
 
@@ -387,7 +407,7 @@ A **Single Page Application (SPA)** means:
 * All page navigation (`/login`, `/profile`, `/dashboard`) is handled **by React in the browser**
 * The server **does NOT have separate HTML files** for each route
 
-Because of this, refreshing `/profile` or `/dashboard` makes Nginx look for a real folder → **404 error**.
+Because of this, refreshing `/profile` or `/dashboard` makes Nginx look for a real folder → **404 error**.<br><br>
 
 ---
 
@@ -404,7 +424,7 @@ Routes like:
 ```
 
 do **not exist as files** on the server.
-Nginx must always return `index.html` so React can load the correct page.
+Nginx must always return `index.html` so React can load the correct page.<br><br>
 
 ---
 
@@ -414,19 +434,19 @@ Nginx must always return `index.html` so React can load the correct page.
 
 * If the requested file doesn’t exist
 * Serve `index.html` instead
-* React Router takes over and loads the page
+* React Router takes over and loads the page<br><br>
 
 **• `root /var/www/html;`**
 
-* Points Nginx to the React `build/` output folder you copied earlier.
+* Points Nginx to the React `build/` output folder you copied earlier.<br><br>
 
 **• `error_page 404 /index.html;`**
 
-* Ensures unknown routes still load the React app instead of showing a 404 page.
+* Ensures unknown routes still load the React app instead of showing a 404 page.<br><br>
 
 **• `listen 80;`**
 
-* Makes the app publicly accessible on standard HTTP port.
+* Makes the app publicly accessible on standard HTTP port.<br><br>
 
 ---
 
@@ -440,7 +460,7 @@ This updated Nginx configuration:
 * Properly serves the React `build` folder
 * Ensures your app works like a real SPA
 
-Without this change, your React app **will break** whenever someone refreshes any page.
+Without this change, your React app **will break** whenever someone refreshes any page.<br><br>
 
 ---
 
@@ -450,6 +470,7 @@ Without this change, your React app **will break** whenever someone refreshes an
 sudo systemctl restart nginx
 ```
 <br><br>
+
 ![Restart Nginx](Figures/Assignment-3/ss39.png)<br><br>
 
 #### **Why:**
@@ -463,7 +484,7 @@ sudo systemctl restart nginx
 
 ## 6. Test Deployment
 
-### 6.1 Retrieve Public IP
+### 6.1 Retrieve Public IP<br><br>
 
 ```bash
 curl ifconfig.me
@@ -502,6 +523,7 @@ These commands all return the public IP of your machine in a simple, plain-text 
 curl http://<public-ip>
 ````
 <br><br>
+
 **Why / Explanation:**
 
 * Sends an HTTP request to your server’s public IP.
