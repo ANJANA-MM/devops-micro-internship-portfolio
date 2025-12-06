@@ -20,11 +20,9 @@ Learn how to use ChatGPT effectively to understand technical concepts.
   - ChatGPT’s response  
 
 📁 **Screenshots:**  
-`./figures/task1/ss1`
-`./figures/task1/ss2`
-`./figures/task1/ss3`
-
-
+(./figures/task1/ss1)<br>
+(./figures/task1/ss2)<br>
+(./figures/task1/ss3)<br>
 ---
 
 ## 🌐 Task 2: Internet & Networking Explanation
@@ -36,8 +34,8 @@ I had to explain how users from anywhere (e.g., USA) can access the website.
 ### My Answer
 The EpicReads website is hosted on a server in Finland. The user is trying to access it from the USA using their device. Both the web server and the user’s device have unique IP addresses. An IP address is an identifier assigned to each device on the internet. The user types the website URL, the device sends a request to the web server. This request first goes to the home router and splits into small data packets. Then they route via different paths through the home router, ISPs, and international fiber cables. The IP address ensures each packet reaches the correct server. At the server, the packets are reassembled, and the server receives the request. This process is called "Packet switching". Then the same process happens vice versa when the server is responding to that request. Protocols are the rules for transferring data. If any packet is lost, TCP detects and requests it again to ensure reliability. IP handles routing. For web browsing, we use HTTP or HTTPS, where HTTPS adds encryption for secure communication.
 
-📁 **Screenshots:**  
-`./figures/task2/ss1`
+
+(./figures/task2/ss1)
 
 ---
 
@@ -57,9 +55,10 @@ The EpicReads website is hosted on a server in Finland. The user is trying to ac
 | Backend | Node.js, Python Flask, Java Spring |
 | Database | MySQL, PostgreSQL, MongoDB |
 
-📁 **Diagrams:**  
-`./figures/task3/ss1`
-`./figures/task3/ss2`
+📁 **Diagrams:** 
+
+(./figures/task3/ss1)<br>
+(./figures/task3/ss2)<br>
 
 ---
 
@@ -83,7 +82,7 @@ My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.2
   - Visible user details  
 
 📁 **Screenshots:**  
-`./figures/task5/ss1`
+(./figures/task5/ss1)
 
 ---
 
@@ -96,7 +95,7 @@ My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.2
 - Published on LinkedIn.
 
 🔗 **LinkedIn Post:** 
-[Post 1](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP)
+[Post 1](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP) <br>
 
 [Post 2](https://www.linkedin.com/posts/anjana-muthunayake_how-does-communication-really-happen-between-activity-7363831961938755584-7fS-?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfZ4q8BKp1Dptghjo7ucKUr-n4bgkwr7Kg)
 
