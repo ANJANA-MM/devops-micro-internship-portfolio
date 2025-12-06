@@ -49,13 +49,16 @@ Deploy a React app on an Ubuntu VM and serve it using Nginx.
 
 ## Deployment Details
 
-For step-by-step instructions on deploying the React app on Ubuntu using Nginx, see the [Deployment Guide](./deployment.md).
+For step-by-step instructions on deploying the React app on Ubuntu using Nginx, see the [Deployment Guide](./assignment-3-deployment.md)
 
-**Screenshots:** `assignment-3-react-app/figures/Assignment-3/ss1.png`
+![Image 1](Figures/Assignment-3/ss1.png)
 
 ---
 
 ## Assignment 4 – Linux Administration Practice
+
+👉 **Full Detailed Task File:**  
+[Assignment 4 – Linux Administration Practice](./assignment-4-linux-admin.md)
 
 **Objective:**  
 Perform post-deployment Linux administration tasks to strengthen troubleshooting skills, including networking, process monitoring, and system information commands.
@@ -97,8 +100,6 @@ Perform post-deployment Linux administration tasks to strengthen troubleshooting
 | `df -h` | Shows disk usage of mounted file systems | Monitors storage availability and prevents disk full issues |
 | `sudo du -sh /var/*` | Displays size of directories/files in `/var` | Identifies large files/directories to optimize disk usage |
 
-**Screenshots:** `assignment-4-linux-admin/figures/`
-
 ---
 
 ## Skills Gained
@@ -108,8 +109,5 @@ Perform post-deployment Linux administration tasks to strengthen troubleshooting
 - Deploying React apps on Ubuntu with Nginx  
 - Basic Linux system administration: networking, processes, memory, disk, users  
 - Troubleshooting and monitoring server performance and availability
-```
-
----
 
 

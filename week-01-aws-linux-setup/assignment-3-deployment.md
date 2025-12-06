@@ -40,23 +40,31 @@ A simple representation of the deployment architecture:
 ## 1. Launch EC2 Instance
 
 ### 1.1 Go to EC2 Dashboard → Launch Instance  
+
 ![Go to EC2 Dashboard](Figures/Assignment-3/ss2.png)  
 
 ### 1.2 Name the Instance  
+
 ![Naming the Instance](Figures/Assignment-3/ss3.png)  
 
-### 1.3 Choose OS & AMI (Ubuntu 22.04 LTS)  
+### 1.3 Choose OS & AMI (Ubuntu 22.04 LTS) 
+
 ![Choosing OS and AMI](Figures/Assignment-3/ss4.png)  
 
 ### 1.4 Select Instance Type  
+
 ![Selecting Instance Type](Figures/Assignment-3/ss5.png)  
 
 ### 1.5 Create / Select Key Pair  
+
 ![Create Key Pair](Figures/Assignment-3/ss6.png)  
-![Key Pair Configuration](Figures/Assignment-3/ss7.png)  
+
+![Key Pair Configuration](Figures/Assignment-3/ss7.png) 
+
 **Why:** Key pairs are required to securely SSH into the EC2 instance.
 
 ### 1.6 Configure Security Group  
+
 ![Security Group Configuration](Figures/Assignment-3/ss8.png)  
 
 | Port | Purpose            |
@@ -65,9 +73,11 @@ A simple representation of the deployment architecture:
 | 80   | Serve app over HTTP |
 
 ### 1.7 Review and Launch instance
+
 ![Review and Launch](Figures/Assignment-3/ss9.png)
 
 ### 1.8 Confirm Instance is Running  
+
 ![Instance Running](Figures/Assignment-3/ss10.png)
 
 ---
@@ -77,10 +87,12 @@ A simple representation of the deployment architecture:
 ### 2.1 Navigate to Key Pair Folder  
 - Open local machine terminal
 - Navigate to the folder which has key pair to login to the VM 
+
 ![Key Pair Folder](Figures/Assignment-3/ss11.png)
 
 ### 2.2 Open Instance → Connect → SSH client
 ### 2.3 Copy SSH Command  
+
 ![Select Connect and Copy Command](Figures/Assignment-3/ss13.png)
 
 ### 2.4 Login to EC2 via SSH
@@ -92,6 +104,7 @@ ssh -i "your-key.pem" ubuntu@<public_dns_of_vm>
 ````
 
 ![SSH Login](Figures/Assignment-3/ss13.png)
+
 **Why:** Securely access the EC2 instance to install software and deploy the app.
 
 ---
@@ -105,6 +118,7 @@ sudo apt update
 ```
 
 ![Update Package Index](Figures/Assignment-3/ss15.png)
+
 **Why:** 
 - Updates the list of available packages and versions from the repositories.
 - Ensures Ubuntu installs the latest package versions when you install or upgrade software.
@@ -153,7 +167,9 @@ sudo systemctl status nginx
 - Verifies the service is running to ensure the web server is ready to serve files.
 
 ![Start Nginx](Figures/Assignment-3/ss19.png)
+
 ![Enable Nginx](Figures/Assignment-3/ss20.png)
+
 ![Check Nginx Status](Figures/Assignment-3/ss21.png)
 
 ---
@@ -191,6 +207,7 @@ nano App.js
 ```
 
 ![Open App.js in nano](Figures/Assignment-3/ss25.png)
+
 ![Modify content](Figures/Assignment-3/ss26.png)
 
 ### 4.5 Install Dependencies
@@ -216,6 +233,7 @@ npm run build
 - These files can be served directly by Nginx to the browser.
 
 ![Build React App](Figures/Assignment-3/ss28.png)
+
 ![Verify build folder](Figures/Assignment-3/ss29.png)
 
 ---
@@ -233,6 +251,7 @@ sudo rm -rf /var/www/html/*
 - Ensures your React app is the only content served.
 
 ![Remove existing files](Figures/Assignment-3/ss30.png)
+
 ![Verify removal](Figures/Assignment-3/ss31.png)
 
 ### 5.2 Copy Build Files
@@ -246,6 +265,7 @@ sudo cp -r build/* /var/www/html/
 - Makes your React app accessible via server IP or domain.
 
 ![Copy build files](Figures/Assignment-3/ss32.png)
+
 ![Verify copied files](Figures/Assignment-3/ss33.png)
 
 ### 5.3 Set Ownership
@@ -255,6 +275,7 @@ sudo chown -R www-data:www-data /var/www/html/
 ````
 
 ![Change ownership](Figures/Assignment-3/ss34.png)
+
 ![Verify ownership](Figures/Assignment-3/ss35.png)
 
 **Why?:**
@@ -300,6 +321,7 @@ sudo chmod -R 755 /var/www/html
 ```
 
 ![Set permissions](Figures/Assignment-3/ss36.png)
+
 ![Verify permissions](Figures/Assignment-3/ss37.png)
 
 **Why?:**

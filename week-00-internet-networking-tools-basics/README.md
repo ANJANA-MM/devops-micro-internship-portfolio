@@ -96,7 +96,9 @@ My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.2
 - Published on LinkedIn.
 
 🔗 **LinkedIn Post:** 
-[click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP)
+[Post 1](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP)
+
+[Post 2](https://www.linkedin.com/posts/anjana-muthunayake_how-does-communication-really-happen-between-activity-7363831961938755584-7fS-?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfZ4q8BKp1Dptghjo7ucKUr-n4bgkwr7Kg)
 
 
 ---
