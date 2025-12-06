@@ -2,8 +2,9 @@
 
 (DevOps Micro Internship – Week 1)
 
-This assignment focuses on **post-deployment Linux administration tasks** on your Ubuntu VM where your React app is running using Nginx.
+This assignment focuses on post-deployment Linux administration tasks on your Ubuntu VM where your React app is running using Nginx.
 It includes networking, process monitoring, and system information commands — all essential for real-world DevOps troubleshooting.
+
 <br><br>
 ---
 
@@ -247,7 +248,7 @@ ps aux | grep nginx
 | Part           | Meaning                              |
 | -------------- | ------------------------------------ |
 | **ps aux**     | show all processes with full details |
-| **|**          | pipe output                          |
+| **\|**         | pipe output                          |
 | **grep nginx** | search for text “nginx”              |
 
 <br>
