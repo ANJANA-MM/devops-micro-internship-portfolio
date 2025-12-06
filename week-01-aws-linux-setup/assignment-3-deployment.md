@@ -1,10 +1,6 @@
 
 # Deployment Guide – React App on AWS EC2 (Ubuntu + Nginx)
 
-[![AWS](https://img.shields.io/badge/AWS-Cloud-orange)](https://aws.amazon.com/)
-[![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-blue)](https://ubuntu.com/)
-[![Nginx](https://img.shields.io/badge/WebServer-Nginx-green)](https://nginx.org/)
-
 This guide explains how to deploy a React application on an Ubuntu EC2 instance using Nginx.  
 Each step includes commands, screenshots, and explanations for why it is required.
 
@@ -39,46 +35,46 @@ A simple representation of the deployment architecture:
 
 ## 1. Launch EC2 Instance
 
-### 1.1 Go to EC2 Dashboard → Launch Instance  
+### 1.1 Go to EC2 Dashboard → Launch Instance  <br><br>
 
 ![Go to EC2 Dashboard](Figures/Assignment-3/ss2.png)  
 
-### 1.2 Name the Instance  
+### 1.2 Name the Instance  <br><br>
 
-![Naming the Instance](Figures/Assignment-3/ss3.png)  
+![Naming the Instance](Figures/Assignment-3/ss3.png)  <br><br>
 
-### 1.3 Choose OS & AMI (Ubuntu 22.04 LTS) 
+### 1.3 Choose OS & AMI (Ubuntu 22.04 LTS) <br><br>
 
-![Choosing OS and AMI](Figures/Assignment-3/ss4.png)  
+![Choosing OS and AMI](Figures/Assignment-3/ss4.png)  <br><br>
 
-### 1.4 Select Instance Type  
+### 1.4 Select Instance Type  <br><br>
 
-![Selecting Instance Type](Figures/Assignment-3/ss5.png)  
+![Selecting Instance Type](Figures/Assignment-3/ss5.png)  <br><br>
 
-### 1.5 Create / Select Key Pair  
+### 1.5 Create / Select Key Pair  <br><br>
 
-![Create Key Pair](Figures/Assignment-3/ss6.png)  
+![Create Key Pair](Figures/Assignment-3/ss6.png)  <br><br>
 
-![Key Pair Configuration](Figures/Assignment-3/ss7.png) 
+![Key Pair Configuration](Figures/Assignment-3/ss7.png) <br><br>
 
 **Why:** Key pairs are required to securely SSH into the EC2 instance.
 
-### 1.6 Configure Security Group  
+### 1.6 Configure Security Group  <br><br>
 
-![Security Group Configuration](Figures/Assignment-3/ss8.png)  
+![Security Group Configuration](Figures/Assignment-3/ss8.png)  <br><br>
 
 | Port | Purpose            |
 |------|------------------|
 | 22   | To access the vm remotely via SSH |
 | 80   | Serve app over HTTP |
 
-### 1.7 Review and Launch instance
+### 1.7 Review and Launch instance<br><br>
 
-![Review and Launch](Figures/Assignment-3/ss9.png)
+![Review and Launch](Figures/Assignment-3/ss9.png) <br><br>
 
-### 1.8 Confirm Instance is Running  
+### 1.8 Confirm Instance is Running  <br><br>
 
-![Instance Running](Figures/Assignment-3/ss10.png)
+![Instance Running](Figures/Assignment-3/ss10.png) <br><br>
 
 ---
 
@@ -86,14 +82,14 @@ A simple representation of the deployment architecture:
 
 ### 2.1 Navigate to Key Pair Folder  
 - Open local machine terminal
-- Navigate to the folder which has key pair to login to the VM 
+- Navigate to the folder which has key pair to login to the VM <br><br>
 
-![Key Pair Folder](Figures/Assignment-3/ss11.png)
+![Key Pair Folder](Figures/Assignment-3/ss11.png) <br><br>
 
 ### 2.2 Open Instance → Connect → SSH client
-### 2.3 Copy SSH Command  
+### 2.3 Copy SSH Command  <br><br>
 
-![Select Connect and Copy Command](Figures/Assignment-3/ss13.png)
+![Select Connect and Copy Command](Figures/Assignment-3/ss13.png) <br><br>
 
 ### 2.4 Login to EC2 via SSH
 
@@ -102,8 +98,8 @@ ssh -i "your-key.pem" ubuntu@<public_ip_of_vm>
 ssh -i "your-key.pem" ubuntu@<public_dns_of_vm>
 
 ````
-
-![SSH Login](Figures/Assignment-3/ss13.png)
+<br><br>
+![SSH Login](Figures/Assignment-3/ss13.png)<br><br>
 
 **Why:** Securely access the EC2 instance to install software and deploy the app.
 
@@ -116,8 +112,8 @@ ssh -i "your-key.pem" ubuntu@<public_dns_of_vm>
 ```bash
 sudo apt update
 ```
-
-![Update Package Index](Figures/Assignment-3/ss15.png)
+<br><br>
+![Update Package Index](Figures/Assignment-3/ss15.png)<br><br>
 
 **Why:** 
 - Updates the list of available packages and versions from the repositories.
@@ -131,9 +127,9 @@ sudo apt install -y nodejs npm
 ```
 **Why:**
 - Installs Node.js runtime to run JavaScript on the server.
-- Installs npm to manage dependencies required by the React project.
+- Installs npm to manage dependencies required by the React project.<br><br>
 
-![Install Node.js & npm](Figures/Assignment-3/ss16.png)
+![Install Node.js & npm](Figures/Assignment-3/ss16.png)<br><br>
 
 ### 3.3 Verify Installation
 
@@ -141,8 +137,8 @@ sudo apt install -y nodejs npm
 node -v
 npm -v
 ```
-
-![Verify Node.js & npm](Figures/Assignment-3/ss17.png)
+<br><br>
+![Verify Node.js & npm](Figures/Assignment-3/ss17.png)<br><br>
 
 ### 3.4 Install Nginx
 
@@ -151,9 +147,9 @@ sudo apt install -y nginx
 ```
 **Why:**
 - Installs Nginx web server to serve your React app.
-- Provides a stable, lightweight HTTP server for production use.
+- Provides a stable, lightweight HTTP server for production use.<br><br>
 
-![Install Nginx](Figures/Assignment-3/ss18.png)
+![Install Nginx](Figures/Assignment-3/ss18.png)<br><br>
 
 ### 3.5 Start & Enable Nginx
 
@@ -164,13 +160,13 @@ sudo systemctl status nginx
 ```
 **Why:**
 - Starts Nginx immediately and sets it to auto-start on boot.
-- Verifies the service is running to ensure the web server is ready to serve files.
+- Verifies the service is running to ensure the web server is ready to serve files.<br><br>
 
-![Start Nginx](Figures/Assignment-3/ss19.png)
+![Start Nginx](Figures/Assignment-3/ss19.png)<br><br>
 
-![Enable Nginx](Figures/Assignment-3/ss20.png)
+![Enable Nginx](Figures/Assignment-3/ss20.png)<br><br>
 
-![Check Nginx Status](Figures/Assignment-3/ss21.png)
+![Check Nginx Status](Figures/Assignment-3/ss21.png)<br><br>
 
 ---
 
@@ -181,34 +177,34 @@ sudo systemctl status nginx
 ```bash
 git clone https://github.com/pravinmishraaws/my-react-app.git
 ```
-
-![Clone React App](Figures/Assignment-3/ss22.png)
+<br><br>
+![Clone React App](Figures/Assignment-3/ss22.png)<br><br>
 
 ### 4.2 Navigate to Project
 
 ```bash
 cd my-react-app
 ```
-
-![Navigate to my-react-app](Figures/Assignment-3/ss23.png)
+<br><br>
+![Navigate to my-react-app](Figures/Assignment-3/ss23.png)<br><br>
 
 ### 4.3 Navigate to `src` Folder
 
 ```bash
 cd src
 ```
-
-![Navigate to src](Figures/Assignment-3/ss24.png)
+<br><br>
+![Navigate to src](Figures/Assignment-3/ss24.png)<br><br>
 
 ### 4.4 Edit App.js (Optional UI Changes)
 
 ```bash
 nano App.js
 ```
+<br><br>
+![Open App.js in nano](Figures/Assignment-3/ss25.png)<br><br>
 
-![Open App.js in nano](Figures/Assignment-3/ss25.png)
-
-![Modify content](Figures/Assignment-3/ss26.png)
+![Modify content](Figures/Assignment-3/ss26.png)<br><br>
 
 ### 4.5 Install Dependencies
 
@@ -220,7 +216,7 @@ npm install
 - Ensures the React project has everything it needs to build and run.
 - Without this, the app might fail during the build process.
 
-![npm install](Figures/Assignment-3/ss27.png)
+![npm install](Figures/Assignment-3/ss27.png)<br><br>
 
 ### 4.6 Build Production Files
 
@@ -232,9 +228,9 @@ npm run build
 - Creates a build/ folder containing HTML, CSS, JS, and assets.
 - These files can be served directly by Nginx to the browser.
 
-![Build React App](Figures/Assignment-3/ss28.png)
+![Build React App](Figures/Assignment-3/ss28.png)<br><br>
 
-![Verify build folder](Figures/Assignment-3/ss29.png)
+![Verify build folder](Figures/Assignment-3/ss29.png)<br><br>
 
 ---
 
@@ -248,11 +244,11 @@ sudo rm -rf /var/www/html/*
 **Why:**
 - Clears the existing files in Nginx’s default web directory.
 - Prevents conflicts with the default Nginx homepage.
-- Ensures your React app is the only content served.
+- Ensures your React app is the only content served.<br><br>
 
-![Remove existing files](Figures/Assignment-3/ss30.png)
+![Remove existing files](Figures/Assignment-3/ss30.png)<br><br>
 
-![Verify removal](Figures/Assignment-3/ss31.png)
+![Verify removal](Figures/Assignment-3/ss31.png)<br><br>
 
 ### 5.2 Copy Build Files
 
@@ -262,21 +258,21 @@ sudo cp -r build/* /var/www/html/
 **Why:**
 - Moves production-ready files from the project folder to Nginx’s web directory.
 - Only files in /var/www/html/ can be served by Nginx.
-- Makes your React app accessible via server IP or domain.
+- Makes your React app accessible via server IP or domain.<br><br>
 
-![Copy build files](Figures/Assignment-3/ss32.png)
+![Copy build files](Figures/Assignment-3/ss32.png)<br><br>
 
-![Verify copied files](Figures/Assignment-3/ss33.png)
+![Verify copied files](Figures/Assignment-3/ss33.png)<br><br>
 
 ### 5.3 Set Ownership
 
 ```bash
 sudo chown -R www-data:www-data /var/www/html/
 ````
+<br><br>
+![Change ownership](Figures/Assignment-3/ss34.png)<br><br>
 
-![Change ownership](Figures/Assignment-3/ss34.png)
-
-![Verify ownership](Figures/Assignment-3/ss35.png)
+![Verify ownership](Figures/Assignment-3/ss35.png)<br><br>
 
 **Why?:**
 
@@ -319,10 +315,10 @@ sudo nginx -T | grep "root"
 ```bash
 sudo chmod -R 755 /var/www/html
 ```
+<br><br>
+![Set permissions](Figures/Assignment-3/ss36.png)<br><br>
 
-![Set permissions](Figures/Assignment-3/ss36.png)
-
-![Verify permissions](Figures/Assignment-3/ss37.png)
+![Verify permissions](Figures/Assignment-3/ss37.png)<br><br>
 
 **Why?:**
 
@@ -356,9 +352,9 @@ server {
 
   error_page 404 /index.html;
 }
-```
+`<br><br>
 
-![Configure Nginx](Figures/Assignment-3/ss38.png)
+![Configure Nginx](Figures/Assignment-3/ss38.png)<br><br>
 
 ---
 
@@ -449,8 +445,8 @@ Without this change, your React app **will break** whenever someone refreshes an
 ```bash
 sudo systemctl restart nginx
 ```
-
-![Restart Nginx](Figures/Assignment-3/ss39.png)
+<br><br>
+![Restart Nginx](Figures/Assignment-3/ss39.png)<br><br>
 
 #### **Why:**
 
@@ -479,22 +475,22 @@ curl ifconfig.me
   * `curl checkip.amazonaws.com` (AWS-hosted, commonly used on EC2 instances)
   * `curl ipinfo.io/ip`
 
-These commands all return the public IP of your machine in a simple, plain-text format.
+These commands all return the public IP of your machine in a simple, plain-text format.<br><br>
 
-![Retrieve Public IP](Figures/Assignment-3/ss40.png)
+![Retrieve Public IP](Figures/Assignment-3/ss40.png)<br><br>
 
 ### 6.2 Check Public IP in AWS Console
-
-![Public IP & DNS in AWS](Figures/Assignment-3/ss41.png)
+<br><br>
+![Public IP & DNS in AWS](Figures/Assignment-3/ss41.png)<br><br>
 
 ### 6.3 Access App via Browser
 
-![Access via Public IP](Figures/Assignment-3/ss42.png)
+![Access via Public IP](Figures/Assignment-3/ss42.png)<br><br>
 
 ### 6.4 Access App via Public DNS
 
 ![Access via Public DNS](Figures/Assignment-3/ss43.png)
-
+<br><br>
 ### 6.5 Verify Using curl
 
 ```bash
@@ -505,9 +501,9 @@ curl http://<public-ip>
 
 * Sends an HTTP request to your server’s public IP.
 * Returns the HTML content served by Nginx, which should be the `index.html` of your React app.
-* Useful to quickly verify that the React app is deployed and accessible without opening a browser.
+* Useful to quickly verify that the React app is deployed and accessible without opening a browser.<br><br>
 
-![Verify Deployment](Figures/Assignment-3/ss44.png)
+![Verify Deployment](Figures/Assignment-3/ss44.png)<br><br>
 
 ---
 

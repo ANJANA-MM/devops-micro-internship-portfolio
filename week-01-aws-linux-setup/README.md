@@ -51,7 +51,7 @@ Deploy a React app on an Ubuntu VM and serve it using Nginx.
 
 For step-by-step instructions on deploying the React app on Ubuntu using Nginx, see the [Deployment Guide](./assignment-3-deployment.md)
 
-![Image 1](Figures/Assignment-3/ss1.png)
+![Image 1](Figures/Assignment-3/ss1.png)<br><br><br>
 
 ---
 
