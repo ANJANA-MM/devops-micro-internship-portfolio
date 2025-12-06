@@ -4,8 +4,7 @@
 
 This assignment focuses on post-deployment Linux administration tasks on your Ubuntu VM where your React app is running using Nginx.
 It includes networking, process monitoring, and system information commands — all essential for real-world DevOps troubleshooting.
-
-<br><br>
+<br>
 ---
 
 ## *📌 Task 1 – Networking Commands**
