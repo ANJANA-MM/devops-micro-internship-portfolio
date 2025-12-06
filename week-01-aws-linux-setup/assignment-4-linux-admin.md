@@ -1,4 +1,4 @@
-# **Assignment 4 – Linux Administration Practice**
+# Assignment 4 – Linux Administration Practice
 
 (DevOps Micro Internship – Week 1)
 
@@ -18,7 +18,7 @@ It includes networking, process monitoring, and system information commands — 
 ```bash
 sudo apt install net-tools
 ````
-<br><br>
+<br>
 
 **Reason:** This installs `ifconfig` and other networking utilities, allowing you to check network interface details.<br><br>
 
@@ -41,6 +41,7 @@ ifconfig
 | **config** | configuration |
 
 <br>
+
 **Full Meaning:**
 "Show the configuration of all network interfaces."<br><br>
 
@@ -69,6 +70,7 @@ ping -c 4 thecloudadvisory.com
 | **thecloudadvisory.com** | target domain                               |
 
 <br>
+
 **Full Meaning:**
 "Send 4 ICMP packets to thecloudadvisory.com and measure response time."<br>
 
@@ -100,6 +102,7 @@ sudo netstat -tulnp
 | **-p**      | show process using the port |
 
 <br>
+
 **Full Meaning:**
 "List all TCP/UDP listening ports and the processes behind them."<br><br>
 
@@ -125,6 +128,7 @@ dig pravinmishra.in
 | **pravinmishra.in** | domain to query           |
 
 <br>
+
 ### **Explanation**
 
 `dig` shows DNS records such as A record, nameservers, and TTL. It helps validate DNS configuration.<br><br>
@@ -168,6 +172,7 @@ wget -O /tmp/Untitled-design-40.png <URL>
 | **/tmp/...** | save location           |
 
 <br>
+
 ### **Explanation**
 
 Used to download images, scripts, or configuration files to the server — very useful in automated deployments.<br><br>
@@ -221,6 +226,7 @@ ps -e
 | **-e** | show all processes |
 
 <br>
+
 ### **Explanation**
 
 Displays all running processes on the machine. Useful for identifying what is currently running, whether user-started programs or system services.<br><br>
@@ -245,6 +251,7 @@ ps aux | grep nginx
 | **grep nginx** | search for text “nginx”              |
 
 <br>
+
 ### **Explanation**
 
 Checks whether the Nginx process is active. Shows PID, memory/CPU usage, and other details of processes matching “nginx”.<br><br>
@@ -268,6 +275,7 @@ pstree
 | **tree** | display in hierarchical tree format |
 
 <br>
+
 ### **Explanation**
 
 Shows parent–child relationships between processes. Useful when analyzing service dependencies or understanding which processes spawned others.<br><br>
@@ -291,6 +299,7 @@ kill <PID>
 | **PID**  | process ID to terminate   |
 
 <br>
+
 ### **Explanation**
 
 Stops a running process. Useful for closing unresponsive or unnecessary tasks. Note: terminating a user process is different from stopping a service; services are managed by the system and may restart automatically.<br><br>
@@ -317,6 +326,7 @@ uname -a
 | **-a** | show all details |
 
 <br>
+
 ### **Explanation**
 
 Displays kernel version, OS type, architecture — helpful for debugging OS issues.<br><br>
@@ -411,6 +421,7 @@ sudo du -sh /var/*
 | **/*`**   | all files and directories inside the selected directory |
 
 <br>
+
 ### **Explanation**
 
 Shows which directories inside `/var` are consuming the most space — useful for identifying log or cache bloat.<br><br>
