@@ -37,7 +37,7 @@ A simple representation of the deployment architecture:
 
 ### 1.1 Go to EC2 Dashboard → Launch Instance  <br><br>
 
-![Go to EC2 Dashboard](Figures/Assignment-3/ss2.png)  
+![Go to EC2 Dashboard](Figures/Assignment-3/ss2.png)   <br><br>
 
 ### 1.2 Name the Instance  <br><br>
 
@@ -57,7 +57,7 @@ A simple representation of the deployment architecture:
 
 ![Key Pair Configuration](Figures/Assignment-3/ss7.png) <br><br>
 
-**Why:** Key pairs are required to securely SSH into the EC2 instance.
+**Why:** Key pairs are required to securely SSH into the EC2 instance.<br><br>
 
 ### 1.6 Configure Security Group  <br><br>
 
@@ -68,13 +68,15 @@ A simple representation of the deployment architecture:
 | 22   | To access the vm remotely via SSH |
 | 80   | Serve app over HTTP |
 
+<br><br>
+
 ### 1.7 Review and Launch instance<br><br>
 
 ![Review and Launch](Figures/Assignment-3/ss9.png) <br><br>
 
 ### 1.8 Confirm Instance is Running  <br><br>
 
-![Instance Running](Figures/Assignment-3/ss10.png) <br><br>
+![Instance Running](Figures/Assignment-3/ss10.png) <br><br><br>
 
 ---
 
@@ -94,14 +96,14 @@ A simple representation of the deployment architecture:
 ### 2.4 Login to EC2 via SSH
 
 ```bash
-ssh -i "your-key.pem" ubuntu@<public_ip_of_vm>
+ssh -i "your-key.pem" ubuntu@<public_ip_of_vm> OR
 ssh -i "your-key.pem" ubuntu@<public_dns_of_vm>
 
 ````
 <br><br>
 ![SSH Login](Figures/Assignment-3/ss13.png)<br><br>
 
-**Why:** Securely access the EC2 instance to install software and deploy the app.
+**Why:** Securely access the EC2 instance to install software and deploy the app.<br><br><br>
 
 ---
 
@@ -166,7 +168,7 @@ sudo systemctl status nginx
 
 ![Enable Nginx](Figures/Assignment-3/ss20.png)<br><br>
 
-![Check Nginx Status](Figures/Assignment-3/ss21.png)<br><br>
+![Check Nginx Status](Figures/Assignment-3/ss21.png)<br><br><br>
 
 ---
 
@@ -214,7 +216,7 @@ npm install
 **Why:**
 - Installs all libraries and packages specified in `package.json`.
 - Ensures the React project has everything it needs to build and run.
-- Without this, the app might fail during the build process.
+- Without this, the app might fail during the build process.<br><br>
 
 ![npm install](Figures/Assignment-3/ss27.png)<br><br>
 
@@ -226,7 +228,7 @@ npm run build
 **Why:**
 - Compiles the React app into optimized production-ready static files.
 - Creates a build/ folder containing HTML, CSS, JS, and assets.
-- These files can be served directly by Nginx to the browser.
+- These files can be served directly by Nginx to the browser.<br><br>
 
 ![Build React App](Figures/Assignment-3/ss28.png)<br><br>
 
@@ -279,34 +281,35 @@ sudo chown -R www-data:www-data /var/www/html/
 - Nginx needs correct file ownership to read and serve your React build files.
 - The default Nginx user changes depending on the OS (Ubuntu = `www-data`, CentOS/Amazon Linux = `nginx`).
 - Setting ownership prevents errors like **403 Forbidden** caused by incorrect permissions.
-- Ensures the web server can access `/var/www/html` without restrictions.
+- Ensures the web server can access `/var/www/html` without restrictions.<br><br>
 
 #### **🔍 How to Check Nginx Default User (Works on Any Linux System)**
 
 ```bash
 grep "user" /etc/nginx/nginx.conf
 ```
-
+<br><br>
 **Typical results:**
 
 - Ubuntu/Debian → `user www-data;`
 - CentOS/RHEL/Amazon Linux → `user nginx;`
 
+<br><br>
 #### **🔍 How to Check Nginx Document Root**
 
-Because different OSes use different web root paths:
+Because different OSes use different web root paths:<br><br>
 
 **Command:**
 
 ```bash
 sudo nginx -T | grep "root"
 ```
-
+<br><br>
 **Common default locations:**
 
 - Ubuntu/Debian → `/var/www/html`
 - CentOS/RHEL → `/usr/share/nginx/html`
-- Nginx (source install) → `/usr/local/nginx/html`
+- Nginx (source install) → `/usr/local/nginx/html`<br><br>
 
 ---
 
@@ -336,7 +339,7 @@ sudo chmod -R 755 /var/www/html
 ```bash
 sudo nano /etc/nginx/sites-available/default
 ```
-
+<br><br>
 Replace the default file with this **React-optimized Nginx configuration**:
 
 ```nginx
@@ -352,7 +355,8 @@ server {
 
   error_page 404 /index.html;
 }
-`<br><br>
+```
+<br><br>
 
 ![Configure Nginx](Figures/Assignment-3/ss38.png)<br><br>
 
@@ -453,7 +457,7 @@ sudo systemctl restart nginx
 * Applies the new Nginx configuration you edited
 * Reloads routing rules required for serving the React SPA
 * Ensures Nginx uses the updated files in `/var/www/html`
-* Clears old cached settings and restarts with a clean state
+* Clears old cached settings and restarts with a clean state<br><br>
 
 ---
 
@@ -464,6 +468,7 @@ sudo systemctl restart nginx
 ```bash
 curl ifconfig.me
 ````
+<br><br>
 
 **Why / Explanation:**
 
@@ -496,7 +501,7 @@ These commands all return the public IP of your machine in a simple, plain-text 
 ```bash
 curl http://<public-ip>
 ````
-
+<br><br>
 **Why / Explanation:**
 
 * Sends an HTTP request to your server’s public IP.
