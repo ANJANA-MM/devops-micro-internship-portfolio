@@ -31,7 +31,7 @@ sudo apt install net-tools
 ```bash
 ifconfig
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**<br><br>
 
@@ -40,7 +40,7 @@ ifconfig
 | **if**     | interface     |
 | **config** | configuration |
 
-<br><br>
+<br>
 **Full Meaning:**
 "Show the configuration of all network interfaces."<br><br>
 
@@ -58,7 +58,7 @@ It’s useful for checking network connectivity, verifying your server’s IP se
 ```bash
 ping -c 4 thecloudadvisory.com
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -68,10 +68,9 @@ ping -c 4 thecloudadvisory.com
 | **-c 4**                 | send exactly 4 packets                      |
 | **thecloudadvisory.com** | target domain                               |
 
-<br><br>
-
+<br>
 **Full Meaning:**
-"Send 4 ICMP packets to thecloudadvisory.com and measure response time."<br><br>
+"Send 4 ICMP packets to thecloudadvisory.com and measure response time."<br>
 
 ### **Explanation**
 
@@ -86,7 +85,7 @@ This checks whether your server can reach the target website and confirms intern
 ```bash
 sudo netstat -tulnp
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -100,8 +99,7 @@ sudo netstat -tulnp
 | **-n**      | show numeric output         |
 | **-p**      | show process using the port |
 
-<br><br>
-
+<br>
 **Full Meaning:**
 "List all TCP/UDP listening ports and the processes behind them."<br><br>
 
@@ -117,7 +115,7 @@ This helps verify whether services like Nginx (port 80) or SSH (port 22) are run
 ```bash
 dig pravinmishra.in
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -125,8 +123,8 @@ dig pravinmishra.in
 | ------------------- | ------------------------- |
 | **dig**             | Domain Information Groper |
 | **pravinmishra.in** | domain to query           |
-<br><br>
 
+<br>
 ### **Explanation**
 
 `dig` shows DNS records such as A record, nameservers, and TTL. It helps validate DNS configuration.<br><br>
@@ -140,7 +138,7 @@ dig pravinmishra.in
 ```bash
 host pravinmishra.in
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -159,7 +157,7 @@ This provides a simpler DNS lookup showing only key records like A/AAAA. It’s 
 ```bash
 wget -O /tmp/Untitled-design-40.png <URL>
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -168,8 +166,8 @@ wget -O /tmp/Untitled-design-40.png <URL>
 | **wget**     | download file via web   |
 | **-O**       | specify output filename |
 | **/tmp/...** | save location           |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Used to download images, scripts, or configuration files to the server — very useful in automated deployments.<br><br>
@@ -213,7 +211,7 @@ Before performing process monitoring, here’s a quick guide to clarify key conc
 ```bash
 ps -e
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -221,8 +219,8 @@ ps -e
 | ------ | ------------------ |
 | **ps** | process status     |
 | **-e** | show all processes |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Displays all running processes on the machine. Useful for identifying what is currently running, whether user-started programs or system services.<br><br>
@@ -236,7 +234,7 @@ Displays all running processes on the machine. Useful for identifying what is cu
 ```bash
 ps aux | grep nginx
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -245,8 +243,8 @@ ps aux | grep nginx
 | **ps aux**     | show all processes with full details |
 | **|**          | pipe output                          |
 | **grep nginx** | search for text “nginx”              |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Checks whether the Nginx process is active. Shows PID, memory/CPU usage, and other details of processes matching “nginx”.<br><br>
@@ -260,7 +258,7 @@ Checks whether the Nginx process is active. Shows PID, memory/CPU usage, and oth
 ```bash
 pstree
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -268,8 +266,8 @@ pstree
 | -------- | ----------------------------------- |
 | **ps**   | process                             |
 | **tree** | display in hierarchical tree format |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Shows parent–child relationships between processes. Useful when analyzing service dependencies or understanding which processes spawned others.<br><br>
@@ -283,7 +281,7 @@ Shows parent–child relationships between processes. Useful when analyzing serv
 ```bash
 kill <PID>
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -291,8 +289,8 @@ kill <PID>
 | -------- | ------------------------- |
 | **kill** | send signals to a process |
 | **PID**  | process ID to terminate   |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Stops a running process. Useful for closing unresponsive or unnecessary tasks. Note: terminating a user process is different from stopping a service; services are managed by the system and may restart automatically.<br><br>
@@ -310,15 +308,15 @@ Stops a running process. Useful for closing unresponsive or unnecessary tasks. N
 ```bash
 uname -a
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
 | Flag   | Meaning          |
 | ------ | ---------------- |
 | **-a** | show all details |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Displays kernel version, OS type, architecture — helpful for debugging OS issues.<br><br>
@@ -331,7 +329,7 @@ Displays kernel version, OS type, architecture — helpful for debugging OS issu
 ```bash
 uptime
 ```
-<br><br>
+<br>
 
 ### **Explanation**
 
@@ -346,7 +344,7 @@ Shows how long the system has been running and its load average — useful for p
 ```bash
 who
 ```
-<br><br>
+<br>
 
 ### **Explanation**
 
@@ -361,7 +359,7 @@ Shows active logged-in users. Helps identify unauthorized access or user session
 ```bash
 free -h
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -380,7 +378,7 @@ Displays total, used, and free memory in readable units. Helpful for detecting m
 ```bash
 df -h
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -400,7 +398,7 @@ Shows available disk space on mounted filesystems. Important for preventing “d
 ```bash
 sudo du -sh /var/*
 ```
-<br><br>
+<br>
 
 ### **Command Breakdown**
 
@@ -411,8 +409,8 @@ sudo du -sh /var/*
 | **-h**    | human-readable    |
 | **/var/** | directory to scan |
 | **/*`**   | all files and directories inside the selected directory |
-<br><br>
 
+<br>
 ### **Explanation**
 
 Shows which directories inside `/var` are consuming the most space — useful for identifying log or cache bloat.<br><br>
