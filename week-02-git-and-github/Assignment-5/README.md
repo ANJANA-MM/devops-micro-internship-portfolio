@@ -122,9 +122,10 @@ Set a default Git identity for all repositories on the local machine. This is us
 **Commands and Steps:**
 
 1. Configure username globally:
+
 ```bash
 git config --global user.name "Your Name"
-````
+```
 
 ![Config username globally](../Figures/Assignment-5/task3/ss1.png) <br>
 *Figure 10 – Config username globally*
