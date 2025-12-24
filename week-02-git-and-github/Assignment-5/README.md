@@ -25,7 +25,7 @@ Simulate creating a new local project directory for the CodeTrack application.
    cd C:\Users\YourName\Desktop   # Windows
    ```
 
-![Navigate to Desktop](../Figures/Assignment-5/task1/ss1.png)
+![Navigate to Desktop](../Figures/Assignment-5/task1/ss1.png) <br>
 *Figure 2 – Navigate to Desktop*
 
 2. Created a folder named `CodeTrack`
@@ -35,7 +35,7 @@ Simulate creating a new local project directory for the CodeTrack application.
    cd CodeTrack
    ```
 
-   ![Create CodeTrack Folder](../Figures/Assignment-5/task1/ss2.png)
+   ![Create CodeTrack Folder](../Figures/Assignment-5/task1/ss2.png) <br>
    *Figure 3 – Create CodeTrack Folder*
 
 3. Initialized a local Git repository using `git init`
@@ -44,7 +44,7 @@ Simulate creating a new local project directory for the CodeTrack application.
    git init
    ```
 
-   ![Initialize Git Repository](../Figures/Assignment-5/task1/ss4.png)
+   ![Initialize Git Repository](../Figures/Assignment-5/task1/ss4.png) <br>
    *Figure 5 – Initialize Git repository*
 
 4. Verified the creation of the hidden `.git` directory
@@ -54,7 +54,7 @@ Simulate creating a new local project directory for the CodeTrack application.
    dir /a       # Windows
    ```
 
-   ![Verify .git folder](../Figures/Assignment-5/task1/ss5.png)
+   ![Verify .git folder](../Figures/Assignment-5/task1/ss5.png) <br>
    *Figure 6 – .git folder verification*
 
 **Expected Output:**
@@ -76,7 +76,7 @@ Configure Git identity **only for this repository**, which is recommended for te
 git config --local user.name "Your Name"
 ````
 
-![Config username locally](../Figures/Assignment-5/task2/ss1.png)
+![Config username locally](../Figures/Assignment-5/task2/ss1.png) <br>
 *Figure 7 – Config username locally*
 
 2. Configure email locally:
@@ -85,7 +85,7 @@ git config --local user.name "Your Name"
 git config --local user.email "your.email@example.com"
 ```
 
-![Config user email locally](../Figures/Assignment-5/task2/ss2.png)
+![Config user email locally](../Figures/Assignment-5/task2/ss2.png) <br>
 *Figure 8 – Config user email locally*
 
 3. Verify local configuration:
@@ -94,7 +94,7 @@ git config --local user.email "your.email@example.com"
 git config --local --list
 ```
 
-![Git local config verification](../Figures/Assignment-5/task2/ss3.png)
+![Git local config verification](../Figures/Assignment-5/task2/ss3.png) <br>
 *Figure 9 – Git local config verification*
 
 ---
@@ -126,7 +126,7 @@ Set a default Git identity for all repositories on the local machine. This is us
 git config --global user.name "Your Name"
 ````
 
-![Config username globally](../Figures/Assignment-5/task3/ss1.png)
+![Config username globally](../Figures/Assignment-5/task3/ss1.png) <br>
 *Figure 10 – Config username globally*
 
 2. Configure email globally:
@@ -135,7 +135,7 @@ git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 ```
 
-![Config user email globally](../Figures/Assignment-5/task3/ss2.png)
+![Config user email globally](../Figures/Assignment-5/task3/ss2.png) <br>
 *Figure 11 – Config user email globally*
 
 3. Verify global configuration:
@@ -144,7 +144,7 @@ git config --global user.email "your.email@example.com"
 git config --global --list
 ```
 
-![Git global config verification](../Figures/Assignment-5/task3/ss3.png)
+![Git global config verification](../Figures/Assignment-5/task3/ss3.png) <br>
 *Figure 12 – Git global config verification*
 
 ---
