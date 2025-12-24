@@ -23,7 +23,7 @@ Simulate creating a new local project directory for the CodeTrack application.
    ```bash
    cd ~/Desktop   # macOS/Linux
    cd C:\Users\YourName\Desktop   # Windows
-````
+   ```
 
 ![Navigate to Desktop](../Figures/Assignment-5/task1/ss1.png)
 *Figure 2 – Navigate to Desktop*
