@@ -40,448 +40,290 @@ For step-by-step commands, expected outputs, and screenshots, see the [Assignmen
 ## Assignment 6 – Tracking and Staging Changes in a CodeTrack Project
 
 **Objective:**
-Learn how to create and track files in a Git repository, stage changes using `git add`, commit updates, and verify Git history. Deploy a simple HTML/CSS web application on an AWS EC2 instance using Nginx.
+Learn how to create and track files in a Git repository, stage and commit changes, verify Git history, and deploy a simple HTML/CSS web application on an AWS EC2 instance using Nginx.
 
----
+**High-Level Tasks Performed:**
 
-## Step 1 – Ensure Git Setup
+* Verified Git installation and configuration.
+* Navigated to the existing `CodeTrack` project directory.
+* Created `index.html` and `style.css`, modified content, and added optional `screenshots` folder.
+* Tracked files using `git add`, staged and committed changes with meaningful messages.
+* Viewed and verified commit history with `git log --oneline`.
+* Modified files and repeated staging and committing process to reflect updates.
+* Launched an AWS EC2 instance, installed and configured Nginx.
+* Deployed project files to Nginx’s web directory, set ownership and permissions.
+* Accessed the application successfully via the EC2 public IP.
 
-* Verify Git is installed and configured properly.
-* Check local or global Git identity using `git config --list`.
-
----
-
-## Step 2 – Navigate to Project Folder
-
-**Commands Used:**
-
-```bash
-cd path/to/CodeTrack   # Windows
-cd ~/path/to/CodeTrack # macOS/Linux
-pwd                    # Confirm current directory
-```
-
-* Ensures you are inside the `CodeTrack` project folder created in Assignment 5.
-
----
-
-## Step 3 – Create and Modify Files
-
-**Files Created:**
+**Key Commands Used:**
 
 ```bash
-touch index.html style.css   # macOS/Linux
-echo > index.html            # Windows
-echo > style.css             # Windows
-```
-
-* Verified files using `ls` or `dir`
-* Modified `index.html` and `style.css` in a text editor
-* Copied content from GitHub repo: `Week-2---Git-GitHub-Assignment`
-
----
-
-## Step 4 – Track Files Using Git
-
-**Commands Used:**
-
-```bash
-git status       # Check untracked files
-git add .        # Stage all files
-# or individually
-git add index.html
-git add style.css
-git status       # Verify staged files
-```
-
-* Expected output: Files marked as **"Changes to be committed"**
-
----
-
-## Step 5 – Commit the Changes
-
-```bash
-git commit -m "Initial commit - Added index.html and style.css"
-git log --oneline   # Verify commit history
-```
-
-* Expected output:
-
-```
-1a2b3c4 Initial commit - Added index.html and style.css
-```
-
----
-
-## Step 6 – Modify a File and Commit Again
-
-* Open `index.html` in a browser and follow instructions to modify content.
-* Stage and commit changes:
-
-```bash
+# Track and commit changes
 git status
-git add index.html
-git commit -m "Updated heading in index.html"
+git add .
+git commit -m "Descriptive commit message"
 git log --oneline
-```
 
-* Expected output:
-
-```
-3d4e5f6 Updated heading in index.html
-1a2b3c4 Initial commit - Added index.html and style.css
-```
-
-* Optional: Added `screenshots` folder and modified `style.css`
-
----
-
-## Step 7 – Deploy Application on EC2
-
-**Steps:**
-
-1. Launch EC2 instance and connect via SSH:
-
-```bash
+# EC2 deployment
 ssh -i your-key.pem ec2-user@<EC2-Public-IP>
-```
-
-2. Update packages & install Nginx:
-
-```bash
 sudo yum update -y
 sudo yum install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
-sudo systemctl status nginx
-```
-
-3. Deploy project files:
-
-```bash
 sudo rm -rf /usr/share/nginx/html/*
 sudo cp -r /home/ec2-user/CodeTrack/* /usr/share/nginx/html/
 sudo chown -R nginx:nginx /usr/share/nginx/html/
 sudo chmod -R 755 /usr/share/nginx/html/
 ```
 
-4. Access application:
+**Skills Gained:**
 
-```
-http://<EC2-Public-IP>
-```
+* Tracking, staging, and committing files in Git
+* Understanding staged vs. unstaged changes
+* Maintaining meaningful Git commit history
+* Modifying and updating project files efficiently
+* Deploying static web applications on AWS EC2 using Nginx
+* Managing Linux file permissions and ownership
+* End-to-end Git + deployment workflow
 
-* Application should load successfully in browser.
-
----
-
-## Skills Gained
-
-* Tracking and staging files with Git
-* Committing changes with meaningful messages
-* Viewing commit history and understanding Git workflow
-* Modifying files and managing staged vs. unstaged changes
-* Deploying a static web application on AWS EC2 with Nginx
-* Basic server management: file permissions, ownership, and service control
+**Detailed Steps & Screenshots:**
+For step-by-step commands, expected outputs, and screenshots, see the [Assignment 6 README](Assignment-6/README.md).
 
 ---
 
 ## Assignment 7 – Branching Workflow: Add & Verify a Contact Page
 
 **Objective:**
-Practice creating branches, committing feature-specific changes, merging them into the main branch, and verifying functionality in a live browser. This workflow mirrors professional Git feature-branch practices.
+Practice a real-world Git **branching workflow** by creating a feature branch, making isolated changes, committing with meaningful messages, merging into the `main` branch, and verifying the merge through Git history visualization.
 
----
+**High-Level Tasks Performed:**
 
-### Step 0 – Start from Existing Repository
+* Started from an existing Git repository on the `main` branch.
+* Created and switched to a dedicated feature branch: `feature/contact-page`.
+* Added a new `contact.html` page with basic contact details.
+* Updated `index.html` to include a navigation link to the Contact Page.
+* Committed changes incrementally with clear, descriptive commit messages.
+* Verified branch isolation to ensure `main` remained unaffected before merging.
+* Merged the feature branch back into `main`.
+* Validated merged changes by opening files in a browser.
+* Inspected Git history using a graphical commit log to confirm a clean merge.
+* Optionally deleted the feature branch after successful merge.
 
-**Commands:**
+**Key Concepts Demonstrated:**
+
+* Feature branch–based development workflow
+* Safe isolation of changes using branches
+* Clean and meaningful commit history
+* Fast-forward vs merge commit visualization
+* Understanding `HEAD`, branch pointers, and merge commits
+* Using `git log --oneline --graph --decorate --all` to analyze repository history
+
+**Key Commands Used:**
 
 ```bash
-cd path/to/CodeTrack
-git status
+# Branching
 git branch
-```
-
-* Ensure you are on `main` (or `master`).
-
----
-
-### Step 1 – Create and Switch to a Feature Branch
-
-```bash
 git checkout -b feature/contact-page
-git branch
-```
-
-* Expected: `* feature/contact-page` indicates active branch.
-
----
-
-### Step 2 – Add `contact.html` in the Branch
-
-**Create the file:**
-
-```bash
-touch contact.html      # macOS/Linux
-# ni contact.html       # Windows PowerShell alternative
-```
-
-**File content:**
-
-```html
-<!doctype html>
-<html>
-<head>
- <meta charset="utf-8">
- <title>Contact - CodeTrack</title>
- <link rel="stylesheet" href="style.css">
-</head>
-<body>
- <h1>Contact Us</h1>
- <p>Email: mail@pravinmishra.in</p>
- <p>Website: https://thecloudadvisory.com/</p>
-</body>
-</html>
-```
-
-**Stage and commit changes:**
-
-```bash
-git add contact.html
-git commit -m "feat(contact): add contact page with email and phone"
-```
-
----
-
-### Step 3 – Add Link to Contact Page in `index.html`
-
-**Insert below existing playlist paragraph:**
-
-```html
-<p class="playlist-line">
-   Want to reach us? Visit the
-   <a href="contact.html">Contact Page</a>.
-</p>
-```
-
-**Stage and commit changes:**
-
-```bash
-git add index.html
-git commit -m "feat(nav): add Contact Page link to index.html"
-```
-
----
-
-### Step 4 – Verify Isolation (Switch Back to Main)
-
-```bash
 git checkout main
-ls
-```
 
-* `contact.html` should **not** be present.
-* Open `index.html` in browser → Contact Page link should not exist on main.
+# Staging & committing
+git status
+git add <file>
+git commit -m "descriptive message"
 
----
-
-### Step 5 – Merge Feature Branch into Main
-
-```bash
+# Merging
 git merge feature/contact-page
-```
 
-**Verify:**
-
-* `ls` → `contact.html` is now present
-* Open `index.html` → Contact Page link works in browser
-
----
-
-### Step 6 – Inspect History Graph
-
-```bash
+# History inspection
 git log --oneline --graph --decorate --all
-```
 
-* Optional: Clean up feature branch:
-
-```bash
+# Cleanup
 git branch -d feature/contact-page
 ```
 
----
+**Skills Gained:**
 
-## Skills Gained
+* Creating and managing feature branches in Git
+* Isolating development work from the main branch
+* Writing clear and structured Git commit messages
+* Safely merging feature branches into main
+* Reading and interpreting Git commit graphs
+* Understanding merge commit pointers (`HEAD -> main, feature/...`)
+* Following professional Git workflows used in team and enterprise projects
 
-* Creating and switching between Git branches
-* Adding feature-specific files and committing changes
-* Merging feature branches into main
-* Verifying changes in the live browser
-* Inspecting commit history and understanding branch workflow
-* Professional Git branching workflow and cleanup
+**Detailed Steps & Screenshots:**
+For complete step-by-step commands, explanations, and screenshots, see the
+[Assignment 7 README](Assignment-7/README.md).
 
 ---
 
 ## Assignment 8 – Setting Up GitHub for CodeTrack
 
 **Objective:**
-Create a GitHub repository for the CodeTrack project, explore key GitHub features, and prepare for pushing code and collaborating remotely.
+Create a GitHub repository for the CodeTrack project, explore core GitHub features, and prepare for pushing code and collaborating remotely.
 
 ---
 
 ### Step 1 – Create a GitHub Account
 
-1. Go to [GitHub](https://github.com/) and click **Sign Up**
-2. Enter email, password, and username
-3. Complete verification and click **Create Account**
-4. Access your **GitHub Dashboard**
+1. Go to [GitHub](https://github.com/) and click **Sign Up**.
+2. Enter your email, password, and username.
+3. Complete verification and click **Create Account**.
+4. Access your **GitHub Dashboard**.
 
 **Expected Outcome:**
 You now have a GitHub account and access to the dashboard.
 
 ---
 
-### Step 2 – Explore GitHub Features
+### Step 2 – Explore Core GitHub Features
 
-* Click **Explore** from the top menu
-* Browse **Trending Repositories**
-* Search for an open-source project (e.g., `theepicbook`)
-* ⭐ Star at least one project
-* Fork a repository to create your own copy
+* Open the **Explore** section from the top navigation.
+* Browse **Trending Repositories** to see popular projects.
+* Use the search bar to find an open-source repository (e.g., `theepicbook`).
+* ⭐ **Star** a repository to save it for future reference.
+* 🍴 **Fork** a repository to create a personal copy.
 
 **Expected Outcome:**
-You have explored GitHub, starred one project, and forked a repository.
+You have explored GitHub, starred at least one project, and forked a repository, gaining familiarity with discovery and engagement features.
 
 ---
 
-### Step 3 – Update Your GitHub Profile
+### Step 3 – Optional Profile Update
 
-1. Click your profile picture → **Your Profile** → **Edit Profile**
-2. Add a bio: “Cloud & DevOps Enthusiast | Learning Git & GitHub”
-3. Optionally add location, company/school, and social links
-4. Upload a profile picture
-5. Save changes
+* Add a short bio (e.g., “Cloud & DevOps Enthusiast | Learning Git & GitHub”).
+* Optionally add location, company/school, and social links.
+* Upload a profile picture and save changes.
 
 **Expected Outcome:**
-Your GitHub profile looks personalized and professional.
+Your GitHub profile is personalized and professional.
+
+---
+
+### Skills Gained
+
+* Creating and configuring a GitHub account
+* Exploring repositories, starring, and forking projects
+* Understanding GitHub repository discovery and engagement
+* Preparing for pushing code and collaborating on GitHub
+* Building confidence with remote Git workflows
+
+---
+
+**Detailed Steps & Screenshots:**
+For complete step-by-step commands, explanations, and screenshots, see the
+[Assignment 8 README](Assignment-8/README.md).
 
 ---
 
 ## Assignment 9 – Collaborating on Mini-Finance with GitHub
 
 **Objective:**
-Simulate a real-world collaborative GitHub workflow: authenticate, fork, clone, push, pull, and create Pull Requests (PRs) on the `mini_finance` project.
+Practice a **real-world GitHub collaboration workflow** by contributing to an existing project using forks, remotes, feature branches, rebasing, and Pull Requests — following professional DevOps and open-source standards.
+
+This assignment simulates how developers collaborate on **team-owned or open-source repositories** where direct push access to the main repository is restricted.
 
 ---
 
-### Step 0 – Access Existing Mini-Finance Code
+### High-Level Tasks Performed
 
-* Upstream repository: [https://github.com/pravinmishraaws/mini_finance](https://github.com/pravinmishraaws/mini_finance)
-* Fork it to your GitHub account
-
----
-
-### Step 1 – Fork & Authenticate
-
-**Fork repository on GitHub**
-**Authentication Options:**
-
-**SSH (recommended):**
-
-```bash
-ssh-keygen -t ed25519 -C "your.email@example.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-```
-
-* Copy contents of `~/.ssh/id_ed25519.pub` to GitHub → Settings → SSH & GPG Keys
-* Test connection:
-
-```bash
-ssh -T git@github.com
-```
-
-**HTTPS alternative:**
-
-```bash
-git config --global credential.helper cache
-```
-
-**Expected Outcome:**
-Forked repo and terminal authentication ready for Git operations.
+* Identified the original (**upstream**) Mini-Finance repository.
+* Forked the repository into a personal GitHub account.
+* Configured secure GitHub authentication using **SSH keys**.
+* Cloned the forked repository locally.
+* Configured multiple Git remotes (`origin` and `upstream`).
+* Created a dedicated feature branch for changes.
+* Made documentation updates and committed changes with clear messages.
+* Synced local branches with upstream using `fetch`, `merge`, and `rebase`.
+* Pushed the feature branch to the forked repository.
+* Created a **Pull Request** to propose changes to the upstream repository.
 
 ---
 
-### Step 2 – Clone Your Fork Locally
+### Key Concepts Demonstrated
+
+* Fork-based GitHub collaboration workflow
+* Understanding and managing `origin` vs `upstream`
+* Secure GitHub authentication using SSH
+* Feature branch–based development
+* Syncing forks with upstream repositories
+* Rebasing to maintain a clean commit history
+* Publishing changes via Pull Requests
+* Professional contribution practices used in enterprise and open-source projects
+
+---
+
+### Key Commands Used
 
 ```bash
-git clone git@github.com:yourusername/mini_finance.git
-cd mini_finance
+# Fork & clone
+git clone git@github.com:<your-username>/mini_finance.git
+
+# Remote configuration
 git remote -v
 git remote add upstream https://github.com/pravinmishraaws/mini_finance.git
-```
 
-* Verify origin points to your fork and upstream points to original repo
-
----
-
-### Step 3 – Create Feature Branch & Make Changes
-
-```bash
+# Branching
 git checkout -b feature-readme-update
-```
 
-* Open `README.md` and add:
-
-> “This project demonstrates Git operations like clone, pull, push, PR—a hands-on Mini-Finance tool.”
-
-```bash
+# Commit changes
 git add README.md
 git commit -m "docs: update README with assignment note"
-```
 
----
-
-### Step 4 – Pull From Upstream & Push to Origin
-
-```bash
+# Sync with upstream
 git fetch upstream
 git checkout main
 git merge upstream/main
 git checkout feature-readme-update
 git rebase main
+
+# Push feature branch
 git push -u origin feature-readme-update
 ```
 
-**Expected Outcome:**
-Feature branch available on GitHub under your fork.
+---
+
+### Skills Gained
+
+* Contributing to shared GitHub repositories safely
+* Managing multiple remotes in Git
+* Working with feature branches and rebasing
+* Keeping forks in sync with upstream projects
+* Creating professional Pull Requests
+* Understanding real-world Git collaboration workflows
+* Preparing for team-based and open-source DevOps environments
 
 ---
 
-### Step 5 – Create a Pull Request
+### Detailed Steps & Screenshots
 
-1. Go to your fork on GitHub
-2. Click **Compare & Pull Request**
-3. Target: `pravinmishraaws/mini_finance:main` ← `feature-readme-update`
-4. Title: `docs: update README with assignment note`
-5. Description: “This PR adds a new section to the README explaining the project's purpose in the context of this GitHub assignment.”
-6. Submit PR
-
-**Expected Outcome:**
-Pull Request created and visible on GitHub, ready for review and merge.
+For complete step-by-step commands, explanations, screenshots, and workflow reasoning, see the
+[Assignment 9 README](Assignment-9/README.md).
 
 ---
 
-## Skills Gained
+## 📝 Week 2 Technical Article – Git Fundamentals
 
-* Creating and configuring GitHub account and profile
-* Exploring GitHub repositories, starring, and forking
-* Forking repositories and authenticating via SSH/HTTPS
-* Cloning, pushing, pulling, and rebasing
-* Creating feature branches and committing changes
-* Opening Pull Requests to propose changes on a remote repository
-* Understanding collaboration workflow in real-world GitHub projects
+I authored a beginner-friendly technical article explaining **Git fundamentals using real-world scenarios and hands-on examples**, focused on practical understanding rather than theory.
+
+🔗 **Git: Your Best Friend in Version Controlling**
+[https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1](https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1)
+
+### 🔧 Key Concepts Covered
+
+* Why Git is essential for version control
+* Repository initialization and `.git` internals
+* File lifecycle: untracked → staged → committed
+* Commits, history tracking, and meaningful messages
+* Branching, HEAD, and detached HEAD
+* Undo strategies: `revert`, `reset --soft`, `reset --hard`
+* Ignoring files with `.gitignore`
+
+### 🎯 Outcome
+
+* Strengthened core Git workflows used in DevOps pipelines
+* Improved ability to explain Git concepts clearly and practically
+* Documented Week 2 learning in a recruiter-friendly technical format
 
 ---
+
+

@@ -51,7 +51,7 @@ Simulate creating a new local project directory for the CodeTrack application.
 
    ```bash
    ls -a        # macOS/Linux
-   dir /a       # Windows
+   Get-ChildItem -Directory -Force      # Windows
    ```
 
    ![Verify .git folder](../Figures/Assignment-5/task1/ss5.png) <br>
@@ -156,9 +156,6 @@ git config --global --list
 user.name=Your Name
 user.email=your.email@example.com
 ```
-
-**Note:**
-Take a screenshot of `git config --global --list` for assignment submission.
 
 ---
 
