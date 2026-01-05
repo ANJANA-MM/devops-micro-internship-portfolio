@@ -8,7 +8,7 @@ This repo serves as both a **learning record** and a **professional portfolio** 
 
 ---
 
-## 🗂 Weekly Progress Overview
+## Weekly Progress Overview
 
 | Week | Topic                               | Status         | Link                                                     |
 | ---- | ----------------------------------- | -------------- | -------------------------------------------------------- |
