@@ -7,7 +7,7 @@ It includes networking, process monitoring, and system information commands — 
 
 ---
 
-## *📌 Task 1 – Networking Commands**
+## *Task 1 – Networking Commands**
 
 ## **1. Check Network Interface Configuration**
 
@@ -181,7 +181,7 @@ Used to download images, scripts, or configuration files to the server — very 
 
 ---
 
-## **📌 Task 2 – Process Monitoring & Control**
+## **Task 2 – Process Monitoring & Control**
 
 ## **Understanding Processes & Services**
 
@@ -205,7 +205,7 @@ Before performing process monitoring, here’s a quick guide to clarify key conc
 
 * **Daemon:** A background process that runs independently of user sessions. Most services are daemons. Unlike normal programs, daemons usually don’t have a visible interface.
 
-> ✅ **Summary:** Programs become processes when executed by a user. Some processes run in the background as services/daemons, which are managed by the system and provide continuous functionality.
+> **Summary:** Programs become processes when executed by a user. Some processes run in the background as services/daemons, which are managed by the system and provide continuous functionality.
 
 > ⚠ **Note:** Commands like `ps`, `pstree`, and `kill` mostly show **user-started processes**, but they can also display system services if you have sufficient permissions. Stopping a user process affects only that task, whereas stopping a system service may impact other dependent processes.<br><br>
 
@@ -308,7 +308,7 @@ Stops a running process. Useful for closing unresponsive or unnecessary tasks. N
 
 ---
 
-## *📌 Task 3 – System Information Commands**
+## *Task 3 – System Information Commands**
 
 ---
 

@@ -29,7 +29,7 @@ A simple representation of the deployment architecture:
    +-------------------+
 
 
-````
+```
 
 ---
 
@@ -298,7 +298,7 @@ sudo chown -R www-data:www-data /var/www/html/
 - Setting ownership prevents errors like **403 Forbidden** caused by incorrect permissions.
 - Ensures the web server can access `/var/www/html` without restrictions.<br><br>
 
-#### **🔍 How to Check Nginx Default User (Works on Any Linux System)**
+#### **How to Check Nginx Default User (Works on Any Linux System)**
 
 ```bash
 grep "user" /etc/nginx/nginx.conf
@@ -312,7 +312,7 @@ grep "user" /etc/nginx/nginx.conf
 
 <br><br>
 
-#### **🔍 How to Check Nginx Document Root**
+#### **How to Check Nginx Document Root**
 
 Because different OSes use different web root paths:<br><br>
 
@@ -534,7 +534,7 @@ curl http://<public-ip>
 
 ---
 
-## ✅ Deployment Completed
+## Deployment Completed
 
-Your React application is now live on the internet using **AWS EC2 + Ubuntu + Nginx**. 🎉
+Your React application is now live on the internet using **AWS EC2 + Ubuntu + Nginx**. 
 

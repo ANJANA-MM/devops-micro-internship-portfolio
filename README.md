@@ -1,4 +1,4 @@
-# 🚀 DevOps Micro Internship – Hands-On Portfolio
+# DevOps Micro Internship – Hands-On Portfolio
 
 Welcome to my **DevOps Micro Internship Portfolio**.
 This repository showcases all the **practical DevOps assignments, labs, and mini-projects** I completed during the DMI Cohort.
@@ -31,7 +31,7 @@ This repo serves as both a **learning record** and a **professional portfolio** 
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 devops-micro-internship-portfolio/
@@ -90,7 +90,7 @@ Each week folder includes:
 
 ---
 
-## 📌 Week 0 – Internet, Networking & Tools Basics
+## Week 0 – Internet, Networking & Tools Basics
 
 This week covers **fundamental concepts required before starting DevOps**, including:
 
@@ -133,7 +133,7 @@ This week covers **fundamental concepts required before starting DevOps**, inclu
 
 ---
 
-## 🎓 Skills Gained Through Week 0
+## Skills Gained Through Week 0
 
 * Understanding Internet and Networking basics
 * Using ChatGPT for learning technical concepts
@@ -145,7 +145,7 @@ This week covers **fundamental concepts required before starting DevOps**, inclu
 
 ---
 
-## 📌 Week 1 – Linux Basics & AWS Environment Setup
+## Week 1 – Linux Basics & AWS Environment Setup
 
 This week focuses on **setting up a cloud-based Linux environment using AWS**, deploying a React app, and practicing Linux administration tasks, including networking, process monitoring, and system information commands.
 
@@ -179,7 +179,7 @@ Perfect! You can update your Week 1 section like this, adding the links to your 
 
 ---
 
-## 🎓 Skills Gained Through Week 1
+## Skills Gained Through Week 1
 
 * Launching and managing AWS EC2 instances
 * Deploying React applications on Ubuntu VMs using Nginx
@@ -190,12 +190,12 @@ Perfect! You can update your Week 1 section like this, adding the links to your 
 
 ---
 
-## 📌 Week 2 – Git & GitHub Workflow
+## Week 2 – Git & GitHub Workflow
 
 This week covers Git fundamentals, repository management, and deploying a simple HTML/CSS application to AWS EC2.
 It focuses on **tracking, staging, committing changes**, and practicing a basic DevOps workflow.
 
-> **Bonus:** I also wrote a detailed article on Git concepts and workflow, explaining version control, branching, commits, and best practices.
+> **Bonus:** I also wrote a detailed article on Git concepts and workflow, explaining version control, branching, commits, and best practices.<br>
 > **Read here:** [Git: Your Best Friend in Version Controlling](https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1)
 
 ---
@@ -272,7 +272,7 @@ sudo chmod -R 755 /usr/share/nginx/html/
 * Managing Linux file permissions and ownership
 * End-to-end Git + deployment workflow
 
-**Detailed Steps & Explanation:** [Assignment 6 README](./week-02-git-github/Assignment-6-README.md)
+**Detailed Steps & Explanation:** [Assignment 6 README](./week-02-git-github/Assignment-6-README.md)<br>
 **LinkedIn Post:**[Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-git-github-activity-7367255864790941697-mBtA?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfZ4q8BKp1Dptghjo7ucKUr-n4bgkwr7Kg)
 
 ---
@@ -360,10 +360,6 @@ Create a GitHub repository for the CodeTrack project, explore core GitHub featur
 
 ---
 
-Absolutely! Here's a polished **Assignment 9 section** that matches the style, tone, and format of your previous assignments. You can copy-paste it into your README under Week 2.
-
----
-
 ### **Assignment 9 – Collaborating on Mini-Finance with GitHub**
 
 **Objective:**
@@ -426,14 +422,14 @@ git push origin main
 
 ---
 
-## 🎯 Purpose of This Portfolio
+## Purpose of This Portfolio
 
 This repository is created to:
 
-* 📝 Document my practical DevOps learning journey
-* 📌 Serve as a **DevOps portfolio** for hiring managers
-* 💡 Help others by sharing clean, easy-to-understand DevOps labs
-* 🚀 Build hands-on skills required for real DevOps job roles
+* Document my practical DevOps learning journey
+* Serve as a **DevOps portfolio** for hiring managers
+* Help others by sharing clean, easy-to-understand DevOps labs
+* Build hands-on skills required for real DevOps job roles
 
 ---
 
@@ -446,7 +442,7 @@ This repository is created to:
 
 ---
 
-## 📬 Contact / Connect
+## Contact / Connect
 
 If you'd like to connect or discuss DevOps, feel free to reach out:
 

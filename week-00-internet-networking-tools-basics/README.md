@@ -5,7 +5,7 @@ Below are all the tasks, explanations, screenshots, and results I completed as p
 
 ---
 
-## 🧑‍💻 Task 1: Using ChatGPT as Your Learning Assistant
+## Task 1: Using ChatGPT as Your Learning Assistant
 
 ### Objective
 Learn how to use ChatGPT effectively to understand technical concepts.
@@ -19,7 +19,7 @@ Learn how to use ChatGPT effectively to understand technical concepts.
   - My detailed prompt  
   - ChatGPT’s response  
 
-📁 **Screenshots:**  
+**Screenshots:**  
 
 ![image1](./figures/task1/ss1.png) <br><br>
 
@@ -29,7 +29,7 @@ Learn how to use ChatGPT effectively to understand technical concepts.
 
 ---
 
-## 🌐 Task 2: Internet & Networking Explanation
+## Task 2: Internet & Networking Explanation
 
 ### Given Scenario
 Friend is launching an online bookstore *EpicReads* hosted in Finland.  
@@ -42,7 +42,7 @@ The EpicReads website is hosted on a server in Finland. The user is trying to ac
 
 ---
 
-## 🏗️ Task 3: Application Architecture (2-Tier & 3-Tier)
+## Task 3: Application Architecture (2-Tier & 3-Tier)
 
 ### What I Did
 - Created diagrams showing:
@@ -58,7 +58,7 @@ The EpicReads website is hosted on a server in Finland. The user is trying to ac
 | Backend | Node.js, Python Flask, Java Spring |
 | Database | MySQL, PostgreSQL, MongoDB |
 
-📁 **Diagrams:** 
+**Diagrams:** 
 
 ![image5](./figures/task3/ss1.png)<br><br>
 
@@ -66,14 +66,14 @@ The EpicReads website is hosted on a server in Finland. The user is trying to ac
 
 ---
 
-## 🌍 Task 4: Domain Name & DNS
+## Task 4: Domain Name & DNS
 
 ### My Answer
 My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.222:3000`, but that’s not user-friendly. Instead, he purchased the domain `epicreads.com`, which is easier to remember. The Domain Name System (DNS) works like the internet’s phonebook; when a user types a domain name, DNS returns its corresponding IP address through the DNS resolution process. To connect the domain to the IPv4 address, an **A Record** should be used because it maps domain names to IPv4 addresses.
 
 ---
 
-## 💻 Task 5: Visual Studio Code Setup
+## Task 5: Visual Studio Code Setup
 
 ### What I Did
 - Installed VS Code.
@@ -85,7 +85,7 @@ My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.2
   - Selected theme  
   - Visible user details  
 
-📁 **Screenshots:**  
+**Screenshots:**  
 
 ![image7](./figures/task5/ss1.png)<br><br><br>
 ---
@@ -106,7 +106,7 @@ My friend’s bookstore, EpicReads, can be accessed via IP address `52.172.142.2
 
 ---
 
-## 📁 Folder Structure for Week 0
+## Folder Structure for Week 0
 
 ```
 week-00-internet-networking-tools-basics/

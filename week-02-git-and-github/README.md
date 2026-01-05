@@ -1,14 +1,15 @@
-# Week 2 – Git & Version Control Fundamentals
+## Week 2 – Git & Version Control Fundamentals
 
 This week focuses on **setting up Git correctly on a local system**, understanding repository initialization, configuring Git identities, tracking changes in a project, working with branches, and interacting with GitHub. These fundamentals are essential before contributing to team and enterprise projects like **CodeTrack** at CloudAdvisory.
 
-The assignments for this week include:
-
-1. **Assignment 5:** CodeTrack — Initial Git Setup (Local Only)
-2. **Assignment 6:** Tracking and Staging Changes in a CodeTrack Project
-3. **Assignment 7:** Branching Workflow — Add & Verify a Contact Page
-4. **Assignment 8:** Setting Up GitHub for CodeTrack
-5. **Assignment 9:** Collaborating on Mini-Finance with GitHub
+| Assignment       | Description                                         | Link                                                                                                             |
+| ---------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Assignment 5** | CodeTrack — Initial Git Setup (Local Only)          | [View README](./Assignment-5/README.md)                                                                          |
+| **Assignment 6** | Tracking and Staging Changes in a CodeTrack Project | [View README](./Assignment-6/README.md)                                                                          |
+| **Assignment 7** | Branching Workflow — Add & Verify a Contact Page    | [View README](./Assignment-7/README.md)                                                                          |
+| **Assignment 8** | Setting Up GitHub for CodeTrack                     | [View README](./Assignment-8/README.md)                                                                          |
+| **Assignment 9** | Collaborating on Mini-Finance with GitHub           | [View README](./Assignment-9/README.md)                                                                          |
+| **Git Article**  | My Git fundamentals and workflow guide on Medium    | [Read Article](https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1) |
 
 ---
 
@@ -301,14 +302,14 @@ For complete step-by-step commands, explanations, screenshots, and workflow reas
 
 ---
 
-## 📝 Week 2 Technical Article – Git Fundamentals
+## Week 2 Technical Article – Git Fundamentals
 
 I authored a beginner-friendly technical article explaining **Git fundamentals using real-world scenarios and hands-on examples**, focused on practical understanding rather than theory.
 
 🔗 **Git: Your Best Friend in Version Controlling**
 [https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1](https://medium.com/@anjana-muthuanayake/git-your-best-friend-in-version-controlling-9773b87c75a1)
 
-### 🔧 Key Concepts Covered
+### Key Concepts Covered
 
 * Why Git is essential for version control
 * Repository initialization and `.git` internals
@@ -318,7 +319,7 @@ I authored a beginner-friendly technical article explaining **Git fundamentals u
 * Undo strategies: `revert`, `reset --soft`, `reset --hard`
 * Ignoring files with `.gitignore`
 
-### 🎯 Outcome
+### Outcome
 
 * Strengthened core Git workflows used in DevOps pipelines
 * Improved ability to explain Git concepts clearly and practically
