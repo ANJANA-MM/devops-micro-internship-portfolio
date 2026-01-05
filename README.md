@@ -343,8 +343,8 @@ Create a GitHub repository for the CodeTrack project, explore core GitHub featur
 * Created a GitHub account and accessed the GitHub Dashboard.
 * Explored the **Explore** section and browsed **Trending Repositories**.
 * Used the search bar to find an open-source repository (`theepicbook`).
-* ⭐ Starred at least one repository to save for future reference.
-* 🍴 Forked a repository to create a personal copy.
+* Starred at least one repository to save for future reference.
+* Forked a repository to create a personal copy.
 * Optionally updated GitHub profile with a short bio, location, company/school, and profile picture.
 
 **Skills Gained:**
