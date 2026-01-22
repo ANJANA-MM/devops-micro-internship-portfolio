@@ -129,7 +129,9 @@ This week covers **fundamental concepts required before starting DevOps**, inclu
 6. **Task 6 – LinkedIn Post**
 
    * Summarized all tasks and shared learning publicly
-   * 🔗 **Post:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP)
+   * 🔗 **Post 1:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-for-beginnersweek-0assignmentanjana-activity-7362170877381132290-rWjP)
+
+   * 🔗 **Post 2:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_how-does-communication-really-happen-between-activity-7363831961938755584-7fS-?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfZ4q8BKp1Dptghjo7ucKUr-n4bgkwr7KgP)
 
 ---
 
@@ -167,6 +169,8 @@ Perfect! You can update your Week 1 section like this, adding the links to your 
    * Configured Nginx to serve the app from the VM’s public IP
    * Saved screenshots of deployment steps
    * **Detailed Steps & Explanation:** [Assignment-3-deployment.md](./week-01-aws-linux-setup/assignment-3-deployment.md)
+   **LinkedIn Post:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-careergrowth-learndevops-activity-7363216274828541952-xrZX)  
+   **Medium Blog:** [Click here](https://lnkd.in/g5rk3tYj)
 
 3. **Assignment 4 – Linux Administration Practice**
 
@@ -433,7 +437,7 @@ This repository is created to:
 
 ---
 
-## 🔗 How to Navigate the Repo
+## How to Navigate the Repo
 
 1. Go to any **week folder**
 2. Open the `README.md` inside

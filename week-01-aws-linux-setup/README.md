@@ -53,6 +53,12 @@ For step-by-step instructions on deploying the React app on Ubuntu using Nginx, 
 
 ![Image 1](Figures/Assignment-3/ss1.png)<br><br><br>
 
+### Related Content
+
+- **LinkedIn Post:** [DevOps Journey – Week 1 React App Deployment](https://www.linkedin.com/posts/anjana-muthunayake_devops-careergrowth-learndevops-activity-7363216274828541952-xrZX)  
+
+- **Medium Blog:** [Week 1 – Deploy React App on Ubuntu VM](https://lnkd.in/g5rk3tYj)
+
 ---
 
 ## Assignment 4 – Linux Administration Practice
