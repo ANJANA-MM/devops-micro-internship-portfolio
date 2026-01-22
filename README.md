@@ -169,8 +169,8 @@ Perfect! You can update your Week 1 section like this, adding the links to your 
    * Configured Nginx to serve the app from the VM’s public IP
    * Saved screenshots of deployment steps
    * **Detailed Steps & Explanation:** [Assignment-3-deployment.md](./week-01-aws-linux-setup/assignment-3-deployment.md)
-   **LinkedIn Post:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-careergrowth-learndevops-activity-7363216274828541952-xrZX)  
-   **Medium Blog:** [Click here](https://lnkd.in/g5rk3tYj)
+   * **LinkedIn Post:** [Click here](https://www.linkedin.com/posts/anjana-muthunayake_devops-careergrowth-learndevops-activity-7363216274828541952-xrZX)  
+   * **Medium Blog:** [Click here](https://lnkd.in/g5rk3tYj)
 
 3. **Assignment 4 – Linux Administration Practice**
 
