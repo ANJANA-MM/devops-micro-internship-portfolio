@@ -14,7 +14,7 @@ This repo serves as both a **learning record** and a **professional portfolio** 
 | ---- | ----------------------------------- | -------------- | -------------------------------------------------------- |
 | 00   | Internet, Networking & Tools Basics | ✅ Completed    | [Click here](./week-00-internet-networking-tools-basics) |
 | 01   | Linux Basics & Shell Commands       | ✅ Completed    | [Click here](./week-01-aws-linux-setup/)                 |
-| 02   | Git & GitHub Workflow               | ✅ Completed    | [Click here](./week-02-git-github/)                      |
+| 02   | Git & GitHub Workflow               | ✅ Completed    | [Click here](./week-02-git-and-github/)                      |
 | 03   | Networking Basics                   | 🔜 Coming Soon |                                                          |
 | 04   | DevOps Lifecycle                    | 🔜 Coming Soon |                                                          |
 | 05   | Agile, Scrum & Jira                 | 🔜 Coming Soon |                                                          |
