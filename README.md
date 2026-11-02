@@ -10,21 +10,21 @@ This repo serves as both a **learning record** and a **professional portfolio** 
 
 ## Weekly Progress Overview
 
-| Week | Topic                               | Status         | Link                                                     |
-| ---- | ----------------------------------- | -------------- | -------------------------------------------------------- |
-| 00   | Internet, Networking & Tools Basics | ✅ Completed    | [Click here](./week-00-internet-networking-tools-basics) |
-| 01   | Linux Basics & Shell Commands       | ✅ Completed    | [Click here](./week-01-aws-linux-setup/)                 |
-| 02   | Git & GitHub Workflow               | ✅ Completed    | [Click here](./week-02-git-and-github/)                      |
-| 03   | Networking Basics                   | 🔜 Coming Soon |                                                          |
-| 04   | DevOps Lifecycle                    | 🔜 Coming Soon |                                                          |
-| 05   | Agile, Scrum & Jira                 | 🔜 Coming Soon |                                                          |
-| 06   | AWS Fundamentals                    | 🔜 Coming Soon |                                                          |
-| 07   | Azure Fundamentals                  | 🔜 Coming Soon |                                                          |
-| 08   | IaC – Terraform & CloudFormation    | 🔜 Coming Soon |                                                          |
-| 09   | Ansible – Configuration Management  | 🔜 Coming Soon |                                                          |
-| 10   | CI/CD Pipelines                     | 🔜 Coming Soon |                                                          |
-| 11   | Docker & Containerization           | 🔜 Coming Soon |                                                          |
-| 12   | Kubernetes                          | 🔜 Coming Soon |                                                          |
+| Week | Topic                               | Status         | Folder Link                                              | Linkedin Posts | Blog Post |
+| ---- | ----------------------------------- | -------------- | -------------------------------------------------------- || |
+| 00   | Internet, Networking & Tools Basics | ✅ Completed    | [Click here](./week-00-internet-networking-tools-basics) | | |
+| 01   | Linux Basics & Shell Commands       | ✅ Completed    | [Click here](./week-01-aws-linux-setup/)                 | | |
+| 02   | Git & GitHub Workflow               | ✅ Completed    | [Click here](./week-02-git-and-github/)                      | | |
+| 03   | Networking Basics                   | 🔜 Coming Soon |                                                          || |
+| 04   | DevOps Lifecycle                    | 🔜 Coming Soon |                                                          | | |
+| 05   | Agile, Scrum & Jira                 | 🔜 Coming Soon |                                                          | | |
+| 06   | AWS Fundamentals                    | 🔜 Coming Soon |                                                          | | |
+| 07   | Azure Fundamentals                  | 🔜 Coming Soon |                                                          | | |
+| 08   | IaC – Terraform & CloudFormation    | 🔜 Coming Soon |                                                          | | |
+| 09   | Ansible – Configuration Management  | 🔜 Coming Soon |                                                          | | |
+| 10   | CI/CD Pipelines                     | 🔜 Coming Soon |                                                          | | |
+| 11   | Docker & Containerization           | 🔜 Coming Soon |                                                          | | |
+| 12   | Kubernetes                          | 🔜 Coming Soon |                                                          | | |
 
 
 > **Legend:** ✅ Completed | 🔄 In Progress | 🔜 Coming Soon
